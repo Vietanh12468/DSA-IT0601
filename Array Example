@@ -9,28 +9,34 @@ public class ArrayExample {
         arr[2] = 3;
         arr[3] = 4;
         arr[4] = 5;
-
+        
+        System.out.print("Array insert:[ ");
+        for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + " "); 
+            }
+        System.out.println("]");
+        
         // Accessing an element
         int element = arr[2]; // 3
         System.out.println("Element at index 2: " + element);
 
         // Deleting an element
         arr[3] = 0;
-        System.out.println("Array after deleting element at index 3:");
+        System.out.print("Array after deleting element at index 3:[ ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();
+        System.out.println("]");
 
         // Searching for an element
         int index = -1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 4) {
+            if (arr[i] == 3) {
                 index = i;
                 break;
             }
         }
-        System.out.println("Index of element 4: " + index);
+        System.out.println("Index of element 3: " + index);
 
         // Getting the size
         int size = arr.length; // 5
