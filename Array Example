@@ -12,9 +12,15 @@ public class ArrayExample {
 
         // Accessing an element
         int element = arr[2]; // 3
+        System.out.println("Element at index 2: " + element);
 
         // Deleting an element
         arr[3] = 0;
+        System.out.println("Array after deleting element at index 3:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
 
         // Searching for an element
         int index = -1;
@@ -24,8 +30,10 @@ public class ArrayExample {
                 break;
             }
         }
+        System.out.println("Index of element 4: " + index);
 
         // Getting the size
         int size = arr.length; // 5
+        System.out.println("Size of the array: " + size);
     }
 }
