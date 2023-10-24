@@ -1,0 +1,70 @@
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Main {
+    public static void main(String[] args) {
+        // Declare a LinkedList that stores strings
+        LinkedList<String> animals = new LinkedList<>();
+
+        // Insert animals into the LinkedList
+        animals.add("bird");
+        animals.add("human");
+        animals.add("dog");
+        animals.add("cat");
+        System.out.println("Linked list created: " + animals);
+
+        // Insert an animal at a specific index in the LinkedList
+        animals.add(0, "cat");
+        System.out.println("Linked list after add: " + animals);
+
+        String cat = animals.get(2);
+        System.out.println("Element at index 2: " + cat);
+
+        // Change the position of an element in the LinkedList
+        animals.set(0, "lion");
+        System.out.println("Linked list after set: " + animals);
+
+        // Remove elements from the LinkedList
+        animals.remove(3);
+        animals.remove("cat");
+        System.out.println("Linked list after removal: " + animals);
+
+        // Clear the LinkedList
+        animals.clear();
+        System.out.println("Linked list after clear: " + animals);
+
+        // Add animals to the LinkedList again
+        animals.add("bird");
+        animals.add("human");
+        animals.add("dog");
+        animals.add("cat");
+
+        // Iterate over the LinkedList using ListIterator
+        ListIterator<String> iterator = animals.listIterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next());
+            System.out.print(" , ");
+        }
+        System.out.println();
+
+        // Add an element at the beginning of the LinkedList
+        animals.addFirst("lion");
+        System.out.println("Linked list after adding first: " + animals);
+
+        // Add an element at the end of the LinkedList
+        animals.addLast("elephant");
+        System.out.println("Linked list after adding last: " + animals);
+
+        // Check if an animal is in the LinkedList
+        boolean containsDog = animals.contains("dog");
+        System.out.println("Does the linked list contain 'dog'? " + containsDog);
+
+        // Find the first position of an animal in the LinkedList
+        int firstIndex = animals.indexOf("dog");
+        System.out.println("First position of 'dog': " + firstIndex);
+
+        // Find the last position of an animal in the LinkedList
+        int lastIndex = animals.lastIndexOf("dog");
+        System.out.println("Last position of 'dog': " + lastIndex);
+    }
+}
