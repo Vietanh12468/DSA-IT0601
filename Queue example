@@ -1,0 +1,49 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueLinkedListADT {
+    public static void queueAdd(Queue<String> Queue){
+        Queue.add("apple");
+        Queue.add("lemon");
+        Queue.add("mango");
+        Queue.add("berry");
+        System.out.println("Queue Fruit:" + Queue);
+    }
+
+    // offer Queue
+    public static void queueOffer(Queue<Integer> queue){
+        for (int i = 0; i <= 10; i++){
+            queue.offer(i);
+        }
+        System.out.println("Queue Number: " + queue);
+    }
+
+    // peek Queue
+    public static void queuePeek(Queue<Integer> queue){
+        int topElement = queue.peek();
+        System.out.println("Top Queue: " + topElement);
+    }
+
+    public static void queuePoll(Queue<Integer> queue){
+        System.out.println("Element poll " + queue.poll());
+        System.out.println("New Queue Number: " + queue);
+    }
+
+    public static void queueContain(Queue<Integer> queue, int elementSearch){
+        boolean check = queue.contains(elementSearch);
+        if(check){
+            System.out.println(elementSearch + " is in queue");
+        }
+        else{
+            System.out.println(elementSearch + " is not in queue");
+        }
+    }
+
+    public static void queueFor(Queue<Integer> queue){
+        Queue<Integer> temp = new LinkedList<>();
+        temp = queue;
+        for(int i =0; ; i++){
+            System.out.println(temp.poll());
+        }
+    }
+}
