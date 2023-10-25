@@ -1,0 +1,58 @@
+//// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+//// then press Enter. You can now see whitespace characters in your code.
+//public class Main {
+//    public static void main(String[] args) {
+//        // Initializing an array
+//        int[] arr = new int[5];
+//
+//        // Inserting elements into the array
+//        arr[0] = 1;
+//        arr[1] = 2;
+//        arr[2] = 3;
+//        arr[3] = 4;
+//        arr[4] = 5;
+//
+//        System.out.print("Array insert:[ ");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println("]");
+//
+//        // Accessing an element
+//        int element = arr[2]; // 3
+//        System.out.println("Element at index 2: " + element);
+//
+//        // Deleting an element
+//        int elementDelete = 1;
+//        int deleteindex = -1;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] == elementDelete) {
+//                deleteindex = i;
+//                break;
+//            }
+//        }
+//        for (int a = deleteindex; a < arr.length - 1; a++) {
+//            arr[a] = arr[a + 1];
+//        }
+//
+//        System.out.print("Array after deleting element 1: [ ");
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println("]");
+//
+//        // Searching for an element
+//        int index = -1;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] == 3) {
+//                index = i;
+//                break;
+//            }
+//        }
+//        System.out.println("Index of element 3: " + index);
+//
+//        // Getting the size
+//        int size = arr.length; // 5
+//        System.out.println("Size of the array: " + size);
+//    }
+//}
