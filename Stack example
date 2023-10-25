@@ -1,0 +1,44 @@
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        // Create a new stack
+        Stack<Integer> stack = new Stack<>();
+
+        // Push elements onto the stack
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        // Print the stack
+        System.out.println("Stack: " + stack);
+
+        // Pop an element from the stack
+        int poppedElement = stack.pop();
+        System.out.println("Popped Element: " + poppedElement);
+
+        // Print the stack after popping
+        System.out.println("Stack: " + stack);
+
+        // Peek the top element of the stack
+        int topElement = stack.peek();
+        System.out.println("Top Element: " + topElement);
+
+        // Check if the stack is empty
+        boolean isEmpty = stack.isEmpty();
+        System.out.println("Is Stack Empty? " + isEmpty);
+
+        // Search for an element in the stack
+        int elementToSearch = 20;
+        int position = stack.search(elementToSearch);
+        if (position != -1) {
+            System.out.println("Element " + elementToSearch + " found at position " + position);
+        } else {
+            System.out.println("Element not found in the stack");
+        }
+
+        // Clear the stack
+        stack.clear();
+        System.out.println("Stack after clearing: " + stack);
+    }
+}
