@@ -1,0 +1,51 @@
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+        class Node {
+            int value;
+            Node next;
+
+            public Node(int value) {
+                this.value = value;
+                this.next = null;
+            }
+        }
+
+        class Stack {
+            Node head;
+
+            public Stack() {
+                this.head = null;
+            }
+
+            public void push(int value) {
+                Node newNode = new Node(value);
+                newNode.next = head;
+                head = newNode;
+            }
+
+            public int pop() {
+                if (isEmpty()) {
+                    System.out.println("Stack is empty.");
+                    return -1; // Return a default value or throw an exception to handle the empty stack case
+                }
+                int value = head.value;
+                head = head.next;
+                return value;
+            }
+
+            public int peek() {
+                if (isEmpty()) {
+                    System.out.println("Stack is empty.");
+                    return -1; // Return a default value or throw an exception to handle the empty stack case
+                }
+                return head.value;
+            }
+
+            public boolean isEmpty() {
+                return head == null;
+            }
+        }
+    }
+}
